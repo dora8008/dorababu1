@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #0b595e; 
+    --secondary-color: #001b29; 
+    --accent-color: #42A5F5; 
+    --light-bg: #f8f9fa;
+    --dark-text: #343a40;
+    --light-text: #ffffff;
+    --total-bg: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.app-title {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.app-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, #0b595e, #1b9fa8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.total-card {
+    background: var(--total-bg);
+    color: var(--light-text);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.total-card .card-title {
+    color: var(--light-text);
+}
+
+.spending-amount {
+    font-size: 4.5rem;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input, select, .form-control {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+}
+
+input:focus, .form-control:focus {
+    outline: none;
+    border: 1px solid #42A5F5;
+    box-shadow: 0 0 10px #13456d;
+}
+
+.btn {
+    border-radius: 12px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #0b595e;
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: darkcyan;
+}
+
+.btn-danger {
+    background-color: #c82333;
+    border-color: #a60818;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #6c757d, #343a40);
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #495057, #212529);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.btn-sm {
+    padding: .25rem .7rem;
+    font-size: .8rem;
+    border-radius: .4rem;
+}
+
+.table {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.table th {
+    background-color: #0b595e;
+    color: white;
+    border: none;
+}
+
+.table td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.table th:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.table th:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.badge.bg-success {
+    background-color: #199035;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+}
+
+.table tbody tr {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+    transition: all 0.2s ease-in-out;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table tbody tr:first-child td:first-child {
+    border-top-left-radius: 8px;
+}
+.table tbody tr:first-child td:last-child {
+    border-top-right-radius: 8px;
+}
+.table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+.table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+.table tbody tr td.text-center.text-muted {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+@media (max-width: 576px) {
+    .spending-amount {
+        font-size: 3.5rem;
+    }
+    .table th, .table td {
+        padding: 8px 10px;
+    }
+    .btn-sm {
+        padding: .2rem .5rem;
+        font-size: .75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+    .btn {
+        font-size: 0.9rem;
+    }
+    .spending-amount {
+        font-size: 3rem;
+    }
+}
